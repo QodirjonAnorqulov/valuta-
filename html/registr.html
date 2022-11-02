@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Поля ввода полной ширины */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Установите стиль для всех кнопок */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Дополнительные стили для кнопки Отмена */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Поплавок отмена и кнопки регистрации и добавить равную ширину */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Добавление отступов к элементам контейнера */
+.container {
+  padding: 16px;
+}
+
+/* Снимите поплавки */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Измените стили для кнопки отмены и кнопки регистрации на дополнительных маленьких экранах */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+<h1>Форма регистрации</h1>
+
+<form  action="./index.html" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Вход</h1>
+    <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+    <hr>
+
+    <label for="email"><b>Name</b></label>
+    <input class="first" type="text" placeholder=" Enter your Name"required>
+<!--  -->
+    <label for="psw"><b>Password</b></label>
+    <input class="second" type="password" placeholder=" Enter your Password"  required>
+
+    <!-- <label for="psw-repeat"><b>Повторите пароль</b></label> -->
+    <!-- <input type="password" placeholder="Повторите пароль" required> -->
+    
+    <label>
+      <input type="checkbox"  name="remember" style="margin-bottom:15px"> Запомнить меня
+    </label>
+    
+    <p>Создавая учетную запись, вы соглашаетесь с нашим <a href="#" style="color:dodgerblue">Условием и конфиденциальностью</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Отменить</button>
+      <button type="submit" class="signupbtn"><a>Вход</a> </button>
+    </div>
+  </div>
+</form>
+<script src="../js/register.js"></script>
+</body>
+</html>
